@@ -4,6 +4,8 @@ from aiogram import Router, types, F
 # from bot import dp
 # from bot.keyboards.keyboard import main_menu_keyboard
 from bot.keyboards.keyboard import main_menu_keyboard, inline_destination_keyboard
+from aiogram.types import CallbackQuery
+from bot.keyboards.keyboard import inline_destination_keyboard
 # from aiogram.filters import Command, F
 
 message_router = Router()
@@ -21,6 +23,8 @@ async def cmd_explore(message: types.Message):
     inline_keyboard = inline_destination_keyboard()
     await message.answer("Choose a destination to explore:", reply_markup=inline_keyboard)
    
+
+
 
 
 

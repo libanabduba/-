@@ -1,6 +1,5 @@
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup, KeyboardButton
 
-from bot.callbacks.callback import process_explore
 
 
 def main_menu_keyboard():
@@ -44,13 +43,10 @@ def back_to_main_menu_keyboard():
     keyboard.add(KeyboardButton("Back to Main Menu"))
     return keyboard
 
-def register_and_gallery_keyboard():
+def register_and_gallery_keyboard_wonchi():
     keyboard = InlineKeyboardMarkup(inline_keyboard= [
-         [InlineKeyboardButton(text="gallery",  callback_data="gallery"),InlineKeyboardButton(text="register",  callback_data="register")],
+         [InlineKeyboardButton(text="gallery",  callback_data="wonchi"),InlineKeyboardButton(text="register",  callback_data="register")],
        
-    ], resize_keyboard=True, one_time_keyboard=True)
-
-    # for button in destinations:
-    #     keyboard.inline_keyboard.append(button)
+    ])
     
-    return keyboard.to_dict()
+    return keyboard
